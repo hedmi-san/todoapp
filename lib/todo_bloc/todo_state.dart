@@ -34,4 +34,13 @@ class TodoState extends Equatable {
       rethrow;
     }
   }
+  Map<String, dynamic> toJson() {
+    return {
+      'todo': todos,
+      'status': status,
+    };
+  }
+
+  @override
+  List<Object?> get props => [todos, status];
 }
